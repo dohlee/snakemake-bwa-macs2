@@ -1,0 +1,13 @@
+name: chip
+channels:
+    - conda-forge
+    - bioconda
+    - defaults
+dependencies:
+    - snakemake
+    - trim-galore
+    - fastqc
+    - multiqc
+    - bwa
+    - parallel-fastq-dump
+    - macs2
