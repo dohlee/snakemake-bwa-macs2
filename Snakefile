@@ -19,9 +19,9 @@ run2lib = {rec.run_accession:rec.library_layout for rec in manifest.to_records()
 single_runs = [r for r in runs if run2lib[r].upper().startswith('SINGLE')]
 paired_runs = [r for r in runs if run2lib[r].upper().startswith('PAIRED')]
 
-narrow_treats = [r.treat for r in relation.to_records()]
-narrow_controls = [r.control for r in relation.to_records()]
-broad_treats = [r.treat for r in relation.to_records() if r.peak_type.upper().startswith('NARROW')]
+narrow_treats = [r.treat for r in relation.to_records() if r.peak_type.upper().startswith('NARROW')]
+narrow_controls = [r.control for r in relation.to_records() if r.peak_type.upper().startswith('NARROW')]
+broad_treats = [r.treat for r in relation.to_records() if r.peak_type.upper().startswith('BROAD')]
 broad_controls = [r.control for r in relation.to_records() if r.peak_type.upper().startswith('BROAD')]
 
 DATA_DIR = Path(config['data_dir'])

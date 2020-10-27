@@ -215,10 +215,10 @@ rule macs2_callpeak_broad:
         # Optional input.
         control = RESULT_DIR / '03_macs2_filterdup' / '{control}.sorted.filterdup.bed',
     output:
-        peak = RESULT_DIR / '04_macs_callpeak' / '{treat}_vs_{control}_peaks.broadPeak',
-        excel = RESULT_DIR / '04_macs_callpeak' / '{treat}_vs_{control}_peaks.xls',
-        summits = RESULT_DIR / '04_macs_callpeak' / '{treat}_vs_{control}_summits.bed',
-        model_script = RESULT_DIR / '04_macs_callpeak' / '{treat}_vs_{control}_model.r',
+        peak = RESULT_DIR / '04_macs2_callpeak' / '{treat}_vs_{control}_peaks.broadPeak',
+        excel = RESULT_DIR / '04_macs2_callpeak' / '{treat}_vs_{control}_peaks.xls',
+        summits = RESULT_DIR / '04_macs2_callpeak' / '{treat}_vs_{control}_summits.bed',
+        model_script = RESULT_DIR / '04_macs2_callpeak' / '{treat}_vs_{control}_model.r',
     params:
         # Extra options.
         extra = c['extra'],
