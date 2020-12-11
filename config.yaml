@@ -5,13 +5,13 @@ ascp_bin: '/data/home/dohoon/.aspera/connect/bin/ascp'
 ascp_key: '/data/home/dohoon/.aspera/connect/etc/asperaweb_id_dsa.openssh'
 
 reference:
-    name: 'mm10'
-    dir: '/data/project/dohoon/reference/mm10'
-    fasta: '/data/project/dohoon/reference/mm10/mm10.fa'
+    name: 'hg38'
+    dir: '/data/project/dohoon/reference/hg38'
+    fasta: '/data/project/dohoon/reference/hg38/hg38.fa'
 
 data_dir: 'data'
 result_dir: 'result'
-bwa_index_dir: '/data/project/dohoon/reference/mm10/bwa_index'
+bwa_index_dir: '/data/project/dohoon/reference/hg38/bwa_index'
 
 threads:
     parallel_fastq_dump: 6
@@ -100,7 +100,7 @@ bwa_mem:
 
 macs2_filterdup:
     extra: ''
-    gsize: 'mm'
+    gsize: 'hs'
     tsize: False
     pvalue: '1e-5'
     keep_dup: 1
@@ -108,7 +108,7 @@ macs2_filterdup:
 
 macs2_callpeak_narrow:
     extra: ''
-    gsize: 'mm'
+    gsize: 'hs'
     keep_dup: 1
     buffer_size: 100000
     name: False
@@ -140,7 +140,7 @@ macs2_callpeak_narrow:
 
 macs2_callpeak_broad:
     extra: ''
-    gsize: 'mm'
+    gsize: 'hs'
     keep_dup: 1
     buffer_size: 100000
     name: False
