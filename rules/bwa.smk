@@ -13,8 +13,8 @@ def bwa_mem_input(wildcards):
         ret['reads'] = str(RESULT_DIR / '01_trim_galore' / f'{wildcards.run}.trimmed.fastq.gz')
     else:
         ret['reads'] = [
-            str(RESULT_DIR) / '01_trim_galore' / f'{wildcards.run}.read1.trimmed.fastq.gz',
-            str(RESULT_DIR) / '01_trim_galore' / f'{wildcards.run}.read2.trimmed.fastq.gz',
+            str(RESULT_DIR / '01_trim_galore' / f'{wildcards.run}.read1.trimmed.fastq.gz'),
+            str(RESULT_DIR / '01_trim_galore' / f'{wildcards.run}.read2.trimmed.fastq.gz'),
         ]
     return ret
 

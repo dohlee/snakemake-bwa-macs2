@@ -28,7 +28,7 @@ rule parallel_fastq_dump_paired:
     input:
         # Required input. Recommend using wildcards for sample names,
         # e.g. {sample,SRR[0-9]+}
-        DATA_DIR / '{run}.sra'
+        '{run}.sra'
     output:
         # Required output.
         temp(DATA_DIR / '{run}.read1.fastq.gz'),
